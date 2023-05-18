@@ -9,13 +9,6 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
     value: ''
   });
 
-  const submitUpdate = value => {
-    updateTodo(edit.id, value);
-    setEdit({
-      id: null,
-      value: ''
-    });
-  };
 
   if (edit.id) {
     return <TodoForm edit={edit} onSubmit={submitUpdate} />;
